@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Ambugo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #e8f4fd;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Header Styles */
+        .navbar {
+            background-color: #003366;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+            font-weight: 500;
+        }
+
+            .navbar-brand:hover, .nav-link:hover {
+                color: #ffcc00 !important;
+            }
+
+        .signup-container {
+            max-width: 600px;
+            margin: 80px auto 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+            .signup-container h2 {
+                color: #003366;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+        .btn-primary {
+            background-color: #0077cc;
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #005fa3;
+            }
+    </style>
+</head>
+<body>
+
+    <!-- ✅ HEADER -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="frontpage.html">Ambugo</a>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="background-color: white;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="frontpage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="signup.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ✅ SIGN UP FORM -->
+    <div class="signup-container">
+        <h2>Create Your Account</h2>
+        <form action="process_signup.php" method="post">
+            <div class="mb-3">
+                <label for="userid" class="form-label">User ID</label>
+                <input type="number" class="form-control" id="userid" name="userid" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="patient" class="form-label">Patient Name</label>
+                <input type="text" class="form-control" id="patient" name="patient" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="usertype" class="form-label">User Type</label>
+                <select class="form-select" id="usertype" name="usertype" required>
+                    <option value="">Select Type</option>
+                    <option value="1">Patient</option>
+                    <option value="2">Doctor</option>
+                    <option value="3">Admin</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <textarea class="form-control" id="address" name="address" rows="2" required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="insuranceid" class="form-label">Insurance ID</label>
+                <input type="number" class="form-control" id="insuranceid" name="insuranceid" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="trackingid" class="form-label">Tracking ID</label>
+                <input type="number" class="form-control" id="trackingid" name="trackingid" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

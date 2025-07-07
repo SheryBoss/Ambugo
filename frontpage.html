@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ambugo - Emergency Ambulance Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #e8f4fd;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #003366;
+        }
+
+        .navbar-brand,
+        .nav-link,
+        .navbar-text {
+            color: #fff !important;
+        }
+
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1600959907703-125ba1374a12?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            color: white;
+            overflow: hidden;
+            animation: zoomHeroBg 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes zoomHeroBg {
+            0% {
+                background-size: 100%;
+            }
+
+            100% {
+                background-size: 110%;
+            }
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .btn-primary {
+            background-color: #0077cc;
+            border-color: #0077cc;
+        }
+
+        .features {
+            background-color: #ffffff;
+            padding: 60px 0;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #0077cc;
+        }
+
+        .services {
+            background-color: #f7f7f7;
+            padding: 60px 0;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #0077cc;
+        }
+
+        .testimonial {
+            background-image: url('https://images.unsplash.com/photo-1600948836890-6647a3a2eebb?auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 0;
+            position: relative;
+        }
+
+            .testimonial::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 51, 102, 0.6);
+            }
+
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact {
+            background-color: #f1f9ff;
+            padding: 60px 0;
+        }
+
+        .footer {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ambugo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-down" data-aos-duration="1200">
+            <h1 data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">Fast & Reliable Ambulance Services</h1>
+            <p data-aos="fade-up" data-aos-delay="500">Your safety is our top priority. Book emergency rides instantly with Ambugo.</p>
+            <a href="booking.html" class="btn btn-primary btn-lg mt-3" data-aos="zoom-in" data-aos-delay="800">Book Now</a>
+        </div>
+    </section>
+
+    <section id="features" class="features text-center">
+        <div class="container">
+            <h2 class="mb-5" data-aos="fade-up">Our Key Features</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="zoom-in">
+                    <i class="fa-solid fa-truck-medical feature-icon"></i>
+                    <h4>24/7 Availability</h4>
+                    <p>Get immediate medical transport any time, any day.</p>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fa-solid fa-map-location-dot feature-icon"></i>
+                    <h4>Live GPS Tracking</h4>
+                    <p>Track your ambulance in real-time for peace of mind.</p>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fa-solid fa-user-nurse feature-icon"></i>
+                    <h4>Trained Medical Staff</h4>
+                    <p>Professionally trained drivers and paramedics onboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services text-center">
+        <div class="container">
+            <h2 class="mb-5" data-aos="fade-up">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="zoom-in">
+                    <i class="fa-solid fa-ambulance service-icon"></i>
+                    <h4>Emergency Ambulance</h4>
+                    <p>Get a fully equipped ambulance with skilled medical staff in emergencies.</p>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fa-solid fa-heart service-icon"></i>
+                    <h4>Cardiac Care</h4>
+                    <p>Specialized ambulance for heart-related emergencies with advanced life support.</p>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fa-solid fa-wheelchair service-icon"></i>
+                    <h4>Non-Emergency Transport</h4>
+                    <p>Safe transport for medical appointments and non-emergency needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial text-center">
+        <div class="container testimonial-content" data-aos="fade-up" data-aos-duration="1000">
+            <h2>What Our Users Say</h2>
+            <blockquote class="blockquote">
+                <p class="mb-3">“Ambugo helped us in a medical emergency within 5 minutes. Truly life-saving!”</p>
+                <footer class="blockquote-footer text-white">Amina Shah, Karachi</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <h3>Contact Us</h3>
+                    <p>Need help or have a question? Reach out to us below.</p>
+                    <form>
+                        <input type="text" class="form-control mb-3" placeholder="Your Name">
+                        <input type="email" class="form-control mb-3" placeholder="Your Email">
+                        <textarea class="form-control mb-3" rows="4" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <img src="https://i.postimg.cc/NjDXTj4G/contact.png" class="img-fluid rounded" alt="Ambulance contact" style="margin-left: 80px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <p>© 2025 Ambugo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false,
+            duration: 1000,
+        });
+    </script>
+</body>
+</html>
